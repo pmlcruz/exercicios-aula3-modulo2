@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Exemplo parâmetro </title>
+</head>
+<body>
+    <h2>Doguinho</h2>
+    <p>Modelando o doguinho</p>
+    <p id="demo"></p>
+    <script>
+        class Dog {
+			constructor(nome,raca, idade) {
+			this.nome = nome;
+			this.raca = raca;
+            this.idade = idade;
+		}		
+    }
+	let myDog = new Dog("Thor", "Raça nao definida", "10 anos");
+	document.getElementById("demo").innerHTML=  
+	"Nome: " + myDog.nome+" "+
+	"Raça: " + myDog.raca+ " Idade: "+ myDog.idade + " anos" ;
+    </script>
+</body>
+</html>

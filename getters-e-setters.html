@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Get e set </title>
+</head>
+<body>
+    <h2>Javascript Getters e setters</h2>
+    <p>Criar contador</p>
+    <p id="demo"></p>
+    <script>
+
+        // Define an object
+        const obj = {
+            cont : 0
+        };
+        // Define Setters and Getters
+        Object.defineProperty(obj, "reset", {
+            get : function () {
+                this.cont = 0;
+            }
+        });
+        Object.defineProperty(obj, "increment", {
+            get : function () 
+            {this.cont++}
+        });
+        Object.defineProperty(obj, "decrement", {
+            get : function () 
+            {this.cont--}
+        });
+        Object.defineProperty(obj, "add", {
+            set : function (value) {
+                this.cont += value;
+            }
+        });
+        Object.defineProperty(obj, "subtract", {
+            set : function (value) {
+                this.cont -= value;
+            }
+        });
+        // Play with cont:
+        obj.reset;
+        obj.add = 5;
+        obj.subtract = 1;
+        obj.increment;
+        obj.decrement;
+        document.getElementById("demo").innerHTML = obj.cont;
+    </script>
+</body>
+</html>
